@@ -95,6 +95,23 @@ start.bat
 - **Java**: 17
 - **Framework**: Spring Boot 3.5.3
 
+## ⚙️ Configurações Personalizadas
+
+Se você quiser personalizar as configurações, pode:
+
+1. **Copiar o arquivo de exemplo:**
+   ```bash
+   cp config.example.properties config.properties
+   ```
+
+2. **Editar as configurações** no arquivo `config.properties`
+
+3. **Usar variáveis de ambiente** para sobrescrever configurações:
+   ```bash
+   export DB_PASSWORD=sua_senha_segura
+   export APP_PORT=9090
+   ```
+
 ## 📁 Estrutura do Projeto
 
 ```
@@ -113,6 +130,9 @@ imobiliaria-backend/
 ├── docker-compose.full.yml
 ├── Dockerfile
 ├── .dockerignore
+├── start.sh
+├── start.bat
+├── config.example.properties
 ├── pom.xml
 └── README.md
 ```
