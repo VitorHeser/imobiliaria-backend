@@ -14,5 +14,20 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  app:
+    build: .
+    container_name: imobiliaria_app
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/imobiliaria_db
+      SPRING_DATASOURCE_USERNAME: imobiliaria
+      SPRING_DATASOURCE_PASSWORD: imobiliaria
+    networks:
+      - imobiliaria-network
+
 volumes:
   postgres_data:
