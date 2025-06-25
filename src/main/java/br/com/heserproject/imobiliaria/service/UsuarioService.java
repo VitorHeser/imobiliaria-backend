@@ -10,9 +10,9 @@ public interface UsuarioService {
 
     List<Usuario> findAll();
 
-    Usuario findById(Long id_Cpf);
+    Usuario findById(Long idCpf);
 
-    Usuario atualizar(Long id_Cpf, Usuario usuario);
+    Usuario atualizar(Long idCpf, Usuario usuario);
 
     void deleteById(Long id);
 }

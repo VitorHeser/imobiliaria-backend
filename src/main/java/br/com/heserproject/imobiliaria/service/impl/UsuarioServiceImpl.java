@@ -5,6 +5,7 @@ import br.com.heserproject.imobiliaria.repository.UsuarioRepository;
 import br.com.heserproject.imobiliaria.service.UsuarioService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -34,14 +35,14 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     @Transactional
-    public Usuario atualizar(Long id_Cpf, Usuario usuario) {
-        usuario.SetCpf(id_Cpf);
+    public Usuario atualizar(Long idCpf, @NotNull Usuario usuario) {
+        usuario.setCpf(idCpf);
         return salvar(usuario);
     }
 
     @Override
     @Transactional
-    public void deleteById(Long id_Cpf) {
-        usuarioRepository.deleteById(id_Cpf);
+    public void deleteById(Long idCpf) {
+        usuarioRepository.deleteById(idCpf);
     }
 }
