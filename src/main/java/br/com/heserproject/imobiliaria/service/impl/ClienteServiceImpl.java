@@ -18,7 +18,7 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     @Transactional
     public Cliente salvar(Cliente cliente) {
-        return clienteRepository.saveAndFlush(endereco);
+        return clienteRepository.saveAndFlush(cliente);
     }
 
     @Override
