@@ -16,6 +16,7 @@ import java.io.Serializable;
 import static org.springframework.http.HttpStatus.OK;
 
 public abstract class BaseSimpleController implements Serializable, ApplicationContextAware {
+
     private static final long serialVersionUID = 1L;
     private transient ApplicationContext applicationContext;
 
