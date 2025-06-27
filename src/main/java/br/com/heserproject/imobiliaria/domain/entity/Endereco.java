@@ -1,9 +1,6 @@
 package br.com.heserproject.imobiliaria.domain.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -12,11 +9,18 @@ import lombok.Data;
 public class Endereco {
 
     @Id
+    @Column(name = "cd_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     @Column(name = "cd_cep")
-    private Long cep;
+    private String cep;
 
     @Column(name = "ds_rua")
     private String rua;
+
+    @Column(name = "nm_numero")
+    private Integer numero;
 
     @Column(name = "ds_cidade")
     private String cidade;
