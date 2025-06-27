@@ -10,10 +10,10 @@ public interface EnderecoService {
 
     List<Endereco> findAll();
 
-    Endereco findById(Long id);
+    Endereco findById(Integer id);
 
-    Endereco atualizar(Long id, Endereco endereco);
+    Endereco atualizar(Integer id, Endereco endereco);
 
-    void deleteById(Long id);
+    void deleteById(Integer id);
 
 }

@@ -27,21 +27,21 @@ public class EnderecoServiceImpl implements EnderecoService {
     }
 
     @Override
-    public Endereco findById(Long id) {
+    public Endereco findById(Integer id) {
         return enderecoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Registro não encontrado."));
     }
 
     @Override
     @Transactional
-    public Endereco atualizar(Long id, Endereco endereco) {
-        endereco.setCep(id);
+    public Endereco atualizar(Integer id, Endereco endereco) {
+        endereco.setId(id);
         return salvar(endereco);
     }
 
     @Override
     @Transactional
-    public void deleteById(Long id) {
+    public void deleteById(Integer id) {
         enderecoRepository.deleteById(id);
     }
 

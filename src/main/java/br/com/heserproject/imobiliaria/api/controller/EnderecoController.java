@@ -29,17 +29,17 @@ public class EnderecoController {
     }
 
     @GetMapping(path = "/{id}", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<Endereco> findById(@PathVariable Long id) {
+    public ResponseEntity<Endereco> findById(@PathVariable Integer id) {
         return ResponseEntity.of(Optional.of(enderecoService.findById(id)));
     }
 
     @DeleteMapping(path = "/{id}", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    public void deleteById(@PathVariable Long id) {
+    public void deleteById(@PathVariable Integer id) {
         enderecoService.deleteById(id);
     }
 
     @PutMapping(path = "/{id}", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<Endereco> atualizar(@PathVariable Long id,
+    public ResponseEntity<Endereco> atualizar(@PathVariable Integer id,
                                               @RequestBody Endereco endereco) {
         return ResponseEntity.of(Optional.of(enderecoService.atualizar(id, endereco)));
     }
