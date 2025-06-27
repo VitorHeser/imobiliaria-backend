@@ -1,7 +1,7 @@
 package br.com.heserproject.imobiliaria.domain.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 @Data
 @Entity

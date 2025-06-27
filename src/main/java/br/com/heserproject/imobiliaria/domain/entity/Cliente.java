@@ -7,8 +7,8 @@ import java.time.LocalDate;
 
 @Data
 @Entity
-@Table(name = "tb_imovel")
-public class Imovel {
+@Table(name = "tb_cliente")
+public class Cliente {
 
     @Id
     @Column(name = "cd_id")
@@ -19,21 +19,15 @@ public class Imovel {
     @JoinColumn(name = "id_endereco")
     private Endereco endereco;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_imobiliaria")
-    private Imobiliaria imobiliaria;
+    @Column(name = "nm_nome")
+    private String nome;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_cliente")
-    private Cliente cliente;
+    @Column(name = "dt_nascimento")
+    private LocalDate dataNascimento;
 
-    @Column(name = "nm_nomeimovel")
-    private String nomeImovel;
-
-    @Column(name = "ds_descricao")
-    private String descricao;
+    @Column(name = "ds_telefone")
+    private String telefone;
 
     @Column(name = "dt_cadastro")
     private LocalDate dataCadastro;
-
 }
