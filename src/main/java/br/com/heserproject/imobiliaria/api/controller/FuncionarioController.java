@@ -1,8 +1,6 @@
 package br.com.heserproject.imobiliaria.api.controller;
 
-import br.com.heserproject.imobiliaria.domain.entity.Endereco;
 import br.com.heserproject.imobiliaria.domain.entity.Funcionario;
-import br.com.heserproject.imobiliaria.service.EnderecoService;
 import br.com.heserproject.imobiliaria.service.FuncionarioService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

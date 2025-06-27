@@ -3,6 +3,7 @@ package br.com.heserproject.imobiliaria.api.controller;
 import br.com.heserproject.imobiliaria.core.base.BaseApiResponse;
 import br.com.heserproject.imobiliaria.core.base.BaseSimpleController;
 import br.com.heserproject.imobiliaria.domain.entity.Endereco;
+import br.com.heserproject.imobiliaria.domain.io.EnderecoOutput;
 import br.com.heserproject.imobiliaria.service.EnderecoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
