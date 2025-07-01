@@ -102,29 +102,6 @@
                     </excludes>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>generate-schema</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                        <configuration>
-                            <profiles>ci</profiles>
-                            <arguments>
-                                <argument>--spring.jpa.hibernate.ddl-auto=none</argument>
-                                <argument>--spring.jpa.properties.javax.persistence.schema-generation.scripts.action=create</argument>
-                                <argument>--spring.jpa.properties.javax.persistence.schema-generation.scripts.create-target=target/schema-com-comentarios.sql</argument>
-                                <argument>--spring.jpa.properties.javax.persistence.schema-generation.create-source=metadata</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
         </plugins>
     </build>
 

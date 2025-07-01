@@ -16,11 +16,11 @@ public class Imovel {
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_endereco")
+    @JoinColumn(name = "id_endereco", foreignKey = @ForeignKey(name = "fk_endereco_imovel"))
     private Endereco endereco;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_imobiliaria")
+    @JoinColumn(name = "id_imobiliaria", foreignKey = @ForeignKey(name = "fk_imobiliaria_imovel"))
     private Imobiliaria imobiliaria;
 
     @ManyToOne(fetch = FetchType.LAZY)

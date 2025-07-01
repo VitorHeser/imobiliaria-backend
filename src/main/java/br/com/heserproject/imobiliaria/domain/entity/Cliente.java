@@ -18,9 +18,9 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @JoinColumn(name = "id_endereco")
     @ManyToOne(fetch = FetchType.LAZY)
     @Comment("id da tabela de endereço")
+    @JoinColumn(name = "id_endereco", foreignKey = @ForeignKey(name = "fk_endereco_cliente"))
     private Endereco endereco;
 
     @Column(name = "nm_nome")

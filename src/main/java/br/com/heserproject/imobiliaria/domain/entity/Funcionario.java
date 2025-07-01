@@ -15,7 +15,7 @@ public class Funcionario {
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_imobiliaria")
+    @JoinColumn(name = "id_imobiliaria", foreignKey = @ForeignKey(name = "fk_imobiliaria_funcionario"))
     private Imobiliaria imobiliaria;
 
     @Column(name = "nm_nome")
